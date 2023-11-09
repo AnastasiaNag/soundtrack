@@ -1,0 +1,450 @@
+body {
+  font-family: "Poppins", sans-serif;
+  height: 3000px;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 100px;
+  top: 0;
+  z-index: 100;
+}
+.header__container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1265px;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 70px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  background-color: #121212;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: #21383e;
+}
+
+.auth {
+  display: flex;
+  height: 100%;
+}
+.auth__link {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  height: 100%;
+  text-decoration: none;
+  color: #553c16;
+}
+.auth__link:nth-child(2) {
+  background-color: bisque;
+  border-bottom-left-radius: 50px;
+}
+
+/* email */
+.email-register {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  max-width: 682px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 28px 28px 28px 40px;
+  box-shadow: 0 0 10px #a259ff;
+  border-radius: 10px;
+  bottom: -90px;
+  left: 200px;
+}
+.email-register__title {
+  color: #7d8186;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.email-register__field {
+  font-size: 23px;
+  color: black;
+  font-weight: 500;
+}
+.email-register__button::after {
+  background-image: url(../images/headphone.png);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 64px;
+  border-radius: 10px;
+  background-color: #725ba1;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.button::after {
+  content: "";
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  transition: 0.15s;
+}
+.button:hover {
+  background-color: #f0c9e4;
+}
+.button:active {
+  background-color: #513c7c;
+  transform: scale(0.85);
+  box-shadow: 0 0 10px #a259ff;
+}
+.button:hover::after {
+  transform: translateX(10px);
+}
+
+.connect {
+  margin-top: 100px;
+}
+.connect__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.connect__button {
+  background-color: aqua;
+}
+.connect__button::after {
+  background-image: url(../images/headphone.png);
+}
+.connect__content {
+  max-width: 550px;
+}
+.connect__title {
+  margin-bottom: 34px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 72px;
+}
+.connect__text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.connect__img {
+  background-image: url("../images/9.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 390px;
+  width: 100%;
+  height: 390px;
+  margin-right: 328px;
+}
+.connect__sub {
+  display: flex;
+  flex-direction: column;
+}
+.connect__n {
+  background-image: url("../images/41.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 502px;
+  width: 100%;
+  height: 502px;
+}
+.connect__c {
+  background-image: url("../images/42.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 328px;
+  width: 100%;
+  height: 328px;
+}
+
+.burger {
+  display: none;
+}
+.burger__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.burger__line {
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+  margin: 3px 0px;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+.burger__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+  transform: translateX(-310px);
+  box-shadow: 0 0 10px #121212;
+}
+.burger__link {
+  padding: 30px 10px;
+}
+.burger__link:hover {
+  background-color: #21383e;
+}
+.burger__checkbox:checked ~ .burger__box .burger__line {
+  background-color: red;
+}
+.burger__checkbox:checked ~ .burger__box .burger__line:first-child {
+  transform: rotate(45deg);
+}
+.burger__checkbox:checked ~ .burger__box .burger__line:last-child {
+  transform: rotate(-45deg);
+}
+.burger__checkbox:checked ~ .burger__box .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.burger__checkbox:checked ~ .burger__menu {
+  transform: translateX(0);
+}
+
+.chat {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.chat__title {
+  color: #121212;
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 62px; /* 124% */
+  letter-spacing: -0.5px;
+}
+.chat__text {
+  color: #404852;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+  letter-spacing: 0.346px;
+}
+.chat__line {
+  display: flex;
+  width: 121px;
+  height: 1px;
+  background-color: black;
+}
+.chat__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  gap: 30px;
+}
+.chat__name {
+  display: flex;
+  gap: 5px;
+}
+.chat__name::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/Rectangle.png);
+}
+.chat__name0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chat__name1 {
+  color: #273240;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px; /* 100% */
+  letter-spacing: 0.3px;
+}
+.chat__name2 {
+  color: #2c3a4b;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  letter-spacing: 0.5px;
+}
+
+.pic {
+  display: flex;
+  width: 600px;
+}
+.pic__text {
+  padding: 15px;
+  display: flex;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+  letter-spacing: 0.3px;
+}
+
+.picture__top {
+  justify-content: end;
+}
+.picture__bottom {
+  justify-content: start;
+}
+.picture__1girl {
+  position: relative;
+  background-image: url(../images/71.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 300px;
+  width: 100%;
+  height: 380px;
+}
+.picture__2girl {
+  position: relative;
+  background-image: url(../images/72.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 300px;
+  width: 100%;
+  height: 380px;
+}
+.picture__1text {
+  position: absolute;
+  left: -200px;
+  top: 150px;
+  width: 234px;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  background-color: #7d6353;
+}
+.picture__2text {
+  position: absolute;
+  display: flex;
+  left: 270px;
+  top: 120px;
+  flex-direction: column;
+  gap: 20px;
+}
+.picture__2text__1 {
+  background-color: #726985;
+  width: 150px;
+  border-radius: 10px;
+}
+.picture__2text__2 {
+  background-color: #726985;
+  width: 250px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__container {
+    padding-left: 8px;
+  }
+  .connect__container {
+    padding: 0 8px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo__text {
+    display: none;
+  }
+  .nav {
+    gap: 10px;
+  }
+  .nav-list {
+    gap: 20px;
+  }
+  .auth__link {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .connect__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .connect__container {
+    gap: 15px;
+  }
+  .connect__img {
+    display: none;
+  }
+  .email-register {
+    bottom: -150px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .burger {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
